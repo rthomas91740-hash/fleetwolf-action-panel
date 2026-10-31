@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Fleet Wolf Action Panel</title>
+ <!-- CODE -->
+</head>
+<body>
+<main id="fwActionPanel">
+ <header class="fw-header">
+  <div class="fw-brand">
+   <div class="fw-wordmark"><span>FLEET</span><span class="fw-wolf">WOLF</span></div>
+   <h1>Action Panel</h1>
+  </div>
+  <div class="fw-controls">
+   <label id="fw-period-wrap">Review period
+    <select id="fw-days"><option value="7" selected>Last 7 days</option><option value="14">Last 14 days</option><option value="30">Last 30 days</option></select>
+   </label>
+   <button id="fw-export" type="button">Export CSV</button>
+   <button id="fw-refresh" type="button">Refresh</button>
+   <button id="fw-motion" type="button" aria-pressed="false">Pause motion</button>
+   <button id="fw-settings-toggle" type="button" aria-expanded="false" hidden>Settings</button>
+  </div>
+ </header>
+ <p id="fw-whoami" class="fw-muted"></p>
+ <p id="fw-status" role="status" aria-live="polite">Open this page from MyGeotab to connect using your current sign-in.</p>
+ <section id="fw-settings" aria-label="Settings" hidden></section>
+ <section id="fw-stage" class="fw-stage" aria-label="Command center">
+  <div class="fw-sweep" aria-hidden="true"></div>
+  <div id="fw-orbit" class="fw-orbit"><div class="fw-rings" aria-hidden="true"></div></div>
+ </section>
+ <section id="fw-kpis" class="fw-kpis" aria-label="Fleet summary"></section>
+ <section id="fw-view" tabindex="-1"></section>
+ <footer class="fw-footer">
+  <div id="fw-notes" class="fw-notes"></div>
+  <p class="fw-signature">Designed by Fleet Wolf · For support, technical service or customization: <a href="mailto:randy@fleetwolf.com">randy@fleetwolf.com</a></p>
+ </footer>
+</main>
+</body>
+</html>
