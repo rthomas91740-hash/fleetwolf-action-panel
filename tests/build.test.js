@@ -32,6 +32,15 @@ test('page carries the support line and tucks data notes behind the info box', (
   assert.ok(html.includes('For data set info, click here'));
 });
 
+test('short config points at the published page', () => {
+  const text = fs.readFileSync(path.join(base, 'addin-config.json'), 'utf8');
+  const config = JSON.parse(text);
+  assert.ok(text.length < 50000);
+  assert.equal(config.files, undefined);
+  assert.match(config.items[0].url, /^https:\/\/.+\/index\.html$/);
+  assert.equal(fs.readFileSync(path.join(base, 'index.html'), 'utf8'), html);
+});
+
 test('script compiles', () => {
   const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
   assert.equal(scripts.length, 1);

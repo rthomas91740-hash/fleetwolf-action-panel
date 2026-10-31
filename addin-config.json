@@ -1,0 +1,16 @@
+{
+  "name": "Fleet Wolf Action Panel",
+  "supportEmail": "randy@fleetwolf.com",
+  "version": "1.0.0",
+  "items": [
+    {
+      "url": "https://rthomas91740-hash.github.io/fleetwolf-action-panel/index.html",
+      "path": "ActivityLink",
+      "category": "AddIns",
+      "menuName": {
+        "en": "Fleet Wolf Action Panel"
+      }
+    }
+  ],
+  "isSigned": false
+}

@@ -17,4 +17,9 @@ const configuration = {
   isSigned: false,
 };
 fs.writeFileSync(path.join(__dirname, 'manifest.json'), `${JSON.stringify(configuration, null, 2)}\n`);
-console.log('Built fleetWolfActionPanel.html and manifest.json.');
+// The add-in is hosted on GitHub Pages, so the page is also published as index.html and the short config points at it.
+fs.writeFileSync(path.join(__dirname, 'index.html'), html);
+const hosted = { ...configuration, items: [{ ...configuration.items[0], url: 'https://rthomas91740-hash.github.io/fleetwolf-action-panel/index.html' }] };
+delete hosted.files;
+fs.writeFileSync(path.join(__dirname, 'addin-config.json'), `${JSON.stringify(hosted, null, 2)}\n`);
+console.log('Built fleetWolfActionPanel.html, index.html, manifest.json and addin-config.json.');
