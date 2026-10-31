@@ -17,4 +17,6 @@ const configuration = {
   isSigned: false,
 };
 fs.writeFileSync(path.join(__dirname, 'manifest.json'), `${JSON.stringify(configuration, null, 2)}\n`);
-console.log('Built fleetWolfActionPanel.html and manifest.json.');
+// MyGeotab's Configuration box stops at 50,000 characters, so this version is pasted and the page is added on the Files tab.
+fs.writeFileSync(path.join(__dirname, 'paste-config.json'), `${JSON.stringify({ ...configuration, files: {} }, null, 2)}\n`);
+console.log('Built fleetWolfActionPanel.html, manifest.json and paste-config.json.');

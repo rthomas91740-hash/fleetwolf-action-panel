@@ -32,6 +32,15 @@ test('page carries the support line and tucks data notes behind the info box', (
   assert.ok(html.includes('For data set info, click here'));
 });
 
+test('paste config fits MyGeotab\'s 50,000 character box and points at the page file', () => {
+  const text = fs.readFileSync(path.join(base, 'paste-config.json'), 'utf8');
+  const config = JSON.parse(text);
+  assert.ok(text.length < 50000);
+  assert.deepEqual(config.files, {});
+  assert.equal(config.items[0].url, 'fleetWolfActionPanel.html');
+  assert.ok(fs.existsSync(path.join(base, config.items[0].url)));
+});
+
 test('script compiles', () => {
   const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
   assert.equal(scripts.length, 1);

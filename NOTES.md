@@ -25,3 +25,6 @@ Running log of notes from the owner, oldest first, with what happened to each.
 6. **Signature and data box.** "I'd like my signature at bottom. Small, and I'd like the data information blurb you have to be condensed in a box that says something like for data set info click here."
    - Status: built in. The data notes open from a "For data set info, click here" box. Messages that data failed to load stay outside the box so they can't be missed.
    - Correction: "Not my signature like that. Just something like hosted or designed by randy@fleetwolf.com for support or technical service or customization." The bottom line now reads "Designed by Fleet Wolf · For support, technical service or customization: randy@fleetwolf.com", and the address opens an email.
+
+7. **First install rejected.** "It didn't accept." MyGeotab said "The configuration object is not valid."
+   - Status: fix waiting on a test. The Configuration box cuts text at 50,000 characters and `manifest.json` is about 113,000. Added `paste-config.json` to paste, with `fleetWolfActionPanel.html` added on the Files tab. If the Files tab won't work, the fallback is hosting the page on a public HTTPS address with no dashes.
