@@ -14,7 +14,7 @@ Running log of notes from the owner, oldest first, with what happened to each.
    - A person can only delegate to someone at a lower level who can already see the vehicles involved.
 
 3. **Repo.** "Let me know when I need to create a new repo."
-   - Status: done 2026-10-31. Private repo: https://github.com/rthomas91740-hash/fleetwolf-action-panel. Geotab's public rule covers hosted add-in files, not the repo; this add-in embeds its files in `manifest.json`.
+   - Status: done 2026-10-31. Private repo: https://github.com/rthomas91740-hash/fleetwolf-action-panel. Geotab's public rule covers hosted add-in files, not the source repo, so only the built page needs a public home (see note 7).
 
 4. **Health and cameras.** "Can we add cameras into here as well, like an offline check. This could be a section for Health, devices not locating, cameras not locating etc. Then for another word not health but it's around the fault codes, etc."
    - Status: built in. Added a Health tab (GO devices not reporting or not locating, device faults, camera health) and a separate Vehicle Faults tab for engine and vehicle fault codes. Rename Vehicle Faults if a different word suits better.
@@ -29,4 +29,6 @@ Running log of notes from the owner, oldest first, with what happened to each.
 7. **First install rejected.** "It didn't accept." MyGeotab said "The configuration object is not valid."
    - The Configuration box cuts text at 50,000 characters and `manifest.json` is about 113,000.
    - The short paste config saved, but the page failed with "Add-In files ... couldn't be loaded": the saved config held no page. The Files tab takes a configuration file or a ZIP, not a loose HTML page, so that instruction was wrong and the short config is removed.
-   - Status: waiting on a test of dropping `manifest.json` on the Files tab in the fleetwolf2 database. The fallback is hosting the page on a public HTTPS address with no dashes.
+   - Dropping `manifest.json` on the Files tab failed the same way, because the saved config still held no page.
+   - The owner was right that it needs to be public. Their working add-ins in fleetwolf2 (Miles by State and others) are one `index.html` on GitHub Pages from a public repo, under addresses with dashes. Geotab's written no-dash rule doesn't stop those.
+   - Status: plan is a small public repo holding only the built page, with this repo and these notes staying private.
