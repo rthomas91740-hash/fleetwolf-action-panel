@@ -31,4 +31,5 @@ Running log of notes from the owner, oldest first, with what happened to each.
    - The short paste config saved, but the page failed with "Add-In files ... couldn't be loaded": the saved config held no page. The Files tab takes a configuration file or a ZIP, not a loose HTML page, so that instruction was wrong and the short config is removed.
    - Dropping `manifest.json` on the Files tab failed the same way, because the saved config still held no page.
    - The owner was right that it needs to be public. Their working add-ins in fleetwolf2 (Miles by State and others) are one `index.html` on GitHub Pages from a public repo, under addresses with dashes. Geotab's written no-dash rule doesn't stop those.
-   - Status: the owner chose to make this repo public and publish `index.html` from it on GitHub Pages. Waiting on that switch and a load test.
+   - Status: fixed 2026-10-31. This repo is public, `index.html` is on GitHub Pages, and the owner confirmed the panel works in the fleetwolf2 database with `addin-config.json`. The rest of the first-install checklist is still open.
+   - The repo has to stay public for this to keep working on a free GitHub plan.
