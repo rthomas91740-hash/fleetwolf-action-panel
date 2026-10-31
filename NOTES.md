@@ -27,4 +27,6 @@ Running log of notes from the owner, oldest first, with what happened to each.
    - Correction: "Not my signature like that. Just something like hosted or designed by randy@fleetwolf.com for support or technical service or customization." The bottom line now reads "Designed by Fleet Wolf · For support, technical service or customization: randy@fleetwolf.com", and the address opens an email.
 
 7. **First install rejected.** "It didn't accept." MyGeotab said "The configuration object is not valid."
-   - Status: saved in the fleetwolf2 database on 2026-10-31; first-install checks still to do. The Configuration box cuts text at 50,000 characters and `manifest.json` is about 113,000, so `paste-config.json` is pasted and `fleetWolfActionPanel.html` is added on the Files tab. If a later Geotab change breaks this, the fallback is hosting the page on a public HTTPS address with no dashes.
+   - The Configuration box cuts text at 50,000 characters and `manifest.json` is about 113,000.
+   - The short paste config saved, but the page failed with "Add-In files ... couldn't be loaded": the saved config held no page. The Files tab takes a configuration file or a ZIP, not a loose HTML page, so that instruction was wrong and the short config is removed.
+   - Status: waiting on a test of dropping `manifest.json` on the Files tab in the fleetwolf2 database. The fallback is hosting the page on a public HTTPS address with no dashes.

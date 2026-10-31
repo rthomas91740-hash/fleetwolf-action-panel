@@ -5,12 +5,11 @@ A MyGeotab add-in that turns fleet data into a to-do list. It opens on what need
 ## Install
 
 1. In the customer's MyGeotab database, open **System Settings > Add-Ins** and add a new add-in.
-2. On the **Configuration** tab, paste in the contents of `paste-config.json`.
-3. On the **Files** tab, add `fleetWolfActionPanel.html`. Select **Done**, then save.
-4. Reload MyGeotab and open **Fleet Wolf Action Panel** in the Add-Ins menu.
-5. Sign in as an administrator, open **Settings**, and set the fuel price, work days and access levels.
+2. On the **Files** tab, drop in `manifest.json`. Select **Done**, then save.
+3. Reload MyGeotab and open **Fleet Wolf Action Panel** in the Add-Ins menu.
+4. Sign in as an administrator, open **Settings**, and set the fuel price, work days and access levels.
 
-Don't paste `manifest.json`. It holds the whole add-in in one file, about 113,000 characters, and the Configuration box stops at 50,000.
+Don't paste `manifest.json` on the Configuration tab. It holds the whole add-in, about 113,000 characters, and that box stops at 50,000. The Files tab takes a configuration file or a ZIP, not a loose HTML page.
 
 ## Check on first install
 
