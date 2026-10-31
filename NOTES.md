@@ -14,7 +14,7 @@ Running log of notes from the owner, oldest first, with what happened to each.
    - A person can only delegate to someone at a lower level who can already see the vehicles involved.
 
 3. **Repo.** "Let me know when I need to create a new repo."
-   - Status: answered 2026-10-31. The first version is ready, so create it now: a private repo named `fleet-wolf-action-panel`.
+   - Status: done 2026-10-31. Private repo: https://github.com/rthomas91740-hash/fleetwolf-action-panel. Geotab's public rule covers hosted add-in files, not the repo; this add-in embeds its files in `manifest.json`.
 
 4. **Health and cameras.** "Can we add cameras into here as well, like an offline check. This could be a section for Health, devices not locating, cameras not locating etc. Then for another word not health but it's around the fault codes, etc."
    - Status: built in. Added a Health tab (GO devices not reporting or not locating, device faults, camera health) and a separate Vehicle Faults tab for engine and vehicle fault codes. Rename Vehicle Faults if a different word suits better.
